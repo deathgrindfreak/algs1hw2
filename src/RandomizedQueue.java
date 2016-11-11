@@ -27,10 +27,8 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         if (size == queue.length)
             resizeArray(2 * queue.length);
 
-        queue[size] = item;
-
-        // Increment the size
-        ++size;
+        // Set the next Item item
+        queue[size++] = item;
     }
 
     public Item dequeue() {
